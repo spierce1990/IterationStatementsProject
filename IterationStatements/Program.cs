@@ -24,7 +24,7 @@ do
 
     numbers.Add(num);
 
-} while (numbers.Count < 100); //<---- While your variable is less than 100
+} while (num < 100); //<---- While your variable is less than 100
 
 
 
@@ -40,14 +40,14 @@ while (num < 200)
 }
 
 // This is to show the user that the numbers will start increasing on the console
-Console.WriteLine($"Increase:{num}");
+Console.WriteLine($"Increase:");
 
 
 // Create a foreach loop using the collection - numbers
 //In the scope of the foreach loop, print each number in number
-foreach (int number in numbers)
+foreach (int item in numbers)
 {
-    Console.WriteLine(number);
+    Console.WriteLine(item);
 }
 
 
@@ -56,7 +56,7 @@ foreach (int number in numbers)
 
 
 Console.WriteLine("");
-Console.WriteLine($"Decrease:{num}");
+Console.WriteLine($"Decrease:");
 
 
 
@@ -65,17 +65,15 @@ Console.WriteLine($"Decrease:{num}");
 // in your conditional, as long as i is less than or equal to the amount of items in "numbers" - use (numbers.Count)
 // AND as long as i is greater than or equal to 0
 // Decrement i by 1
-int x;
-int[] n = new int[199];
 
 
 //start for loop here
-for (x = 199; x >= 1; x--)
+for (int i = 199; i <= (numbers.Count) &&  i >= 0; i-- ) 
 {
 
     //(i = 10; i >= 1; i--)
     // Console.WriteLine(n[i] + " ");
     // place numbers[i] inside of the Console.WriteLine() method
 
-    Console.WriteLine(x);
+    Console.WriteLine(numbers[i]);
 }
